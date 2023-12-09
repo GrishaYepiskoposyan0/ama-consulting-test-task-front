@@ -3,12 +3,7 @@ import { FileUploader } from "../../common/components/file-uploader/FileUploader
 import { useSelector } from "react-redux";
 
 export const Home = () => {
-  const uploadLoading = useSelector(
-    (state) => state.records.uploadRecord.loading,
-  );
-
   const uploadError = useSelector((state) => state.records.uploadRecord.error);
-  console.log(uploadLoading, uploadError);
   return (
     <Layout>
       <h1>Here you can upload file and check it's validity!</h1>

@@ -9,7 +9,6 @@ export const InvalidFiles = () => {
   useEffect(() => {
     dispatch(getReports());
   }, []);
-  console.log(reports);
   return (
     <Layout>
       {reports.map((report) => {
