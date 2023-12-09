@@ -33,7 +33,7 @@ export const uploadRecord = createAsyncThunk(
       return data;
     } catch (e) {
       console.log(e);
-      throw new Error("Invalid File!");
+      throw new Error(e.response.data.message);
     }
   },
 );

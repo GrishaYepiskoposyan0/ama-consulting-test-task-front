@@ -13,8 +13,16 @@ export const Home = () => {
           here!
         </a>
       </h1>
-      {uploadError && <h1 className="text-red-600">{uploadError}</h1>}
+      {uploadError && <h1 className="text-red-600">Invalid File!</h1>}
       <FileUploader />
+      <ul className="mt-10">
+        {uploadError &&
+          uploadError.split("\n").map((m, index) => (
+            <li className="text-red-600 pt-1" key={index}>
+              {m}
+            </li>
+          ))}
+      </ul>
     </Layout>
   );
 };
