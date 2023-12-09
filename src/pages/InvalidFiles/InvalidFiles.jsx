@@ -1,7 +1,7 @@
 import { Layout } from "../../common/components/layout/Layout.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { getRecordFile, getReports } from "../../redux/recordSlice.jsx";
+import { getReports } from "../../redux/recordSlice.jsx";
 
 export const InvalidFiles = () => {
   const dispatch = useDispatch();
@@ -13,7 +13,7 @@ export const InvalidFiles = () => {
     <Layout>
       {reports.map((report) => {
         return (
-          <div className="flex items-center">
+          <div className="flex items-center" key={report}>
             <h1>{report}</h1>
             <a
               href={`${import.meta.env.VITE_BACKEND_URL}/record/${report}`}
