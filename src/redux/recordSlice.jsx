@@ -39,7 +39,7 @@ export const uploadRecord = createAsyncThunk(
 );
 export const getReports = createAsyncThunk("getReportsAction", async () => {
   try {
-    const { data } = await axiosInstance.get("/record");
+    const { data } = await axiosInstance.get("/record/files");
 
     return data.filenames;
   } catch (e) {
