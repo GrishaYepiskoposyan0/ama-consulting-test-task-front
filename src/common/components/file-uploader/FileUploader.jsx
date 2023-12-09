@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { uploadRecord } from "../../../redux/recordSlice.jsx";
 
@@ -6,6 +6,10 @@ export const FileUploader = () => {
   const [file, setFile] = useState();
   const inputRef = useRef();
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    inputRef.current.value = null;
+  }, []);
   const handleFileChange = (e) => {
     if (e.target.files) {
       setFile(e.target.files[0]);

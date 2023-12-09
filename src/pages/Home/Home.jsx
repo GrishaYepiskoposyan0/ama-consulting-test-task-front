@@ -8,7 +8,7 @@ export const Home = () => {
     <Layout>
       <h1>Here you can upload file and check it's validity!</h1>
       <h1>
-        Also you can see all invalid file reports{" "}
+        Also you can see all invalid file reports
         <a href="/invalid-reports" className="text-red-600 hover:underline">
           here!
         </a>
